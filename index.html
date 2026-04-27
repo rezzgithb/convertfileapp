@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>FileTools — Convert & Pecah File</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>  
+<body>
+  <!-- Toast Container -->
+    <div class="toast-box" id="toastBox" aria-live="polite"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Navigasi utama">
+        <a href="index.html" class="nav-brand">
+            <div class="nav-logo">FT</div>
+            <span class="nav-brand-text">FileTools</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active"><i class="fa-solid fa-house" style="margin-right:3px;font-size:11px"></i>Home</a>
+            <a href="tools.html" class="nav-link"><i class="fa-solid fa-wrench" style="margin-right:3px;font-size:11px"></i>Tools</a>
+            <a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info" style="margin-right:3px;font-size:11px"></i>About</a>
+            <a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope" style="margin-right:3px;font-size:11px"></i>Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="tools.html" class="nav-link"><i class="fa-solid fa-wrench"></i>Tools</a>
+        <a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i>About</a>
+        <a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope"></i>Contact</a>
+    </div>
+    <!-- Halaman Home -->
+    <main class="page">
+        <section class="hero">
+            <div class="hero-blob b1"></div>
+            <div class="hero-blob b2"></div>
+            <div class="hero-blob b3"></div>
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fa-solid fa-bolt"></i>100% Offline — Tanpa Server</div>
+                <h1 class="hero-title">Convert & Pecah<br><span>File Excel / TXT</span></h1>
+                <p class="hero-sub">Ubah file .xlsx jadi .txt atau pecah ribuan data jadi beberapa file, langsung di perangkatmu tanpa server.</p>
+                <a href="tools.html" class="hero-cta"><i class="fa-solid fa-rocket"></i>Mulai Sekarang</a>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-label">Fitur Utama</div>
+            <div class="section-title">Apa Bisa Dikerjakan?</div>
+            <div class="feat-grid">
+                <div class="feat-card">
+                    <div class="feat-icon fi-blue"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                    <h3>Convert XLSX ke TXT</h3>
+                    <p>Baca kolom nomor dari Excel, langsung jadi file teks 1 baris 1 nomor.</p>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon fi-dark"><i class="fa-solid fa-scissors"></i></div>
+                    <h3>Pecah File Otomatis</h3>
+                    <p>Pecah data jadi beberapa file, masing-masing maks 1000 baris, dikirim sebagai ZIP.</p>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon fi-blue"><i class="fa-solid fa-wifi-slash"></i></div>
+                    <h3>Tanpa Koneksi Server</h3>
+                    <p>Semua proses berjalan di browser, data tidak dikirim ke mana pun.</p>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon fi-dark"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3>Optimisasi Mobile</h3>
+                    <p>Dirancang khusus untuk layar HP Android, responsif dan ringan.</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="stats-row">
+            <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">Format Input</div></div>
+            <div class="stat-box"><div class="stat-num">1K</div><div class="stat-label">Baris / File</div></div>
+            <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Server Butuh</div></div>
+        </div>
+
+        <section class="section">
+            <div class="section-label">Cara Pakai</div>
+            <div class="section-title">3 Langkah Mudah</div>
+            <div class="steps-list">
+                <div class="step"><div class="step-num">1</div><div class="step-text">Upload file .xlsx atau .txt ke area yang tersedia</div></div>
+                <div class="step"><div class="step-num">2</div><div class="step-text">Pilih aksi: Convert (xlsx ke txt) atau Pecah File</div></div>
+                <div class="step"><div class="step-num">3</div><div class="step-text">File hasil langsung ter-download ke perangkatmu</div></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+  

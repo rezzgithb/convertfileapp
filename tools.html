@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Tools — FileTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Library untuk proses file -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="toast-box" id="toastBox" aria-live="polite"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Navigasi utama">
+        <a href="index.html" class="nav-brand">
+            <div class="nav-logo">FT</div>
+            <span class="nav-brand-text">FileTools</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-house" style="margin-right:3px;font-size:11px"></i>Home</a>
+            <a href="tools.html" class="nav-link active"><i class="fa-solid fa-wrench" style="margin-right:3px;font-size:11px"></i>Tools</a>
+            <a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info" style="margin-right:3px;font-size:11px"></i>About</a>
+            <a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope" style="margin-right:3px;font-size:11px"></i>Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="tools.html" class="nav-link active"><i class="fa-solid fa-wrench"></i>Tools</a>
+        <a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i>About</a>
+        <a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope"></i>Contact</a>
+    </div>
+    <!-- Halaman Tools -->
+    <main class="page">
+        <div class="tools-wrap">
+            <div class="tools-head">
+                <h1>Tools</h1>
+                <p>Upload file lalu pilih aksi yang diinginkan</p>
+            </div>
+
+            <!-- Upload Zone -->
+            <div class="upload-zone" id="uploadZone" role="button" tabindex="0" aria-label="Area upload file">
+                <div class="up-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <h3>Seret file ke sini</h3>
+                <p class="up-hint">atau tap untuk memilih file</p>
+                <div class="fmt-tags">
+                    <span class="fmt-tag">.XLSX</span>
+                    <span class="fmt-tag">.TXT</span>
+                </div>
+                <input type="file" class="file-input" id="fileInput" accept=".xlsx,.txt">
+            </div>
+
+            <!-- Info File Terpilih -->
+            <div class="file-info" id="fileInfo">
+                <i class="fa-solid fa-file-circle-check"></i>
+                <div class="fi-detail">
+                    <div class="fi-name" id="fiName"></div>
+                    <div class="fi-size" id="fiSize"></div>
+                </div>
+                <button class="fi-remove" id="fiRemove" aria-label="Hapus file"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <!-- Tombol Aksi -->
+            <div class="action-btns">
+                <button class="btn-action btn-convert disabled" id="btnConvert" aria-label="Convert file">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>Convert
+                </button>
+                <button class="btn-action btn-split disabled" id="btnSplit" aria-label="Pecah file">
+                    <i class="fa-solid fa-scissors"></i>Pecah File
+                </button>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress-wrap" id="progressWrap">
+                <div class="progress-label" id="progressLabel">Memproses...</div>
+                <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+                <div class="progress-pct" id="progressPct">0%</div>
+            </div>
+
+            <!-- Hasil -->
+            <div class="result-wrap" id="resultWrap">
+                <div class="result-head">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span id="resultTitle">Berhasil!</span>
+                </div>
+                <div class="result-stats">
+                    <div class="rs-box"><div class="rs-val" id="rsTotal">0</div><div class="rs-lbl">Total Data</div></div>
+                    <div class="rs-box"><div class="rs-val" id="rsFiles">0</div><div class="rs-lbl">File Output</div></div>
+                </div>
+                <button class="btn-download" id="btnDownload">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Download File</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>

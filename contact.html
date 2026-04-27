@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Contact — FileTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="toast-box" id="toastBox" aria-live="polite"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Navigasi utama">
+        <a href="index.html" class="nav-brand">
+            <div class="nav-logo">FT</div>
+            <span class="nav-brand-text">FileTools</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-house" style="margin-right:3px;font-size:11px"></i>Home</a>
+            <a href="tools.html" class="nav-link"><i class="fa-solid fa-wrench" style="margin-right:3px;font-size:11px"></i>Tools</a>
+            <a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info" style="margin-right:3px;font-size:11px"></i>About</a>
+            <a href="contact.html" class="nav-link active"><i class="fa-solid fa-envelope" style="margin-right:3px;font-size:11px"></i>Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="tools.html" class="nav-link"><i class="fa-solid fa-wrench"></i>Tools</a>
+        <a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i>About</a>
+        <a href="contact.html" class="nav-link active"><i class="fa-solid fa-envelope"></i>Contact</a>
+    </div>
+    <!-- Halaman Contact -->
+    <main class="page">
+        <div class="contact-wrap">
+            <div class="contact-head">
+                <h1>Contact</h1>
+                <p>Hubungi developer atau dukung via QRIS</p>
+            </div>
+
+            <!-- Developer -->
+            <div class="contact-card" style="cursor:default">
+                <div class="cc-icon dev"><i class="fa-solid fa-code"></i></div>
+                <div class="cc-info">
+                    <h3>Developer</h3>
+                    <p>zarezz444</p>
+                </div>
+            </div>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/zarezz444" target="_blank" rel="noopener" class="contact-card">
+                <div class="cc-icon ig"><i class="fa-brands fa-instagram"></i></div>
+                <div class="cc-info">
+                    <h3>Instagram</h3>
+                    <p>@zarezz444</p>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square cc-arrow"></i>
+            </a>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@zarezz444" target="_blank" rel="noopener" class="contact-card">
+                <div class="cc-icon tt"><i class="fa-brands fa-tiktok"></i></div>
+                <div class="cc-info">
+                    <h3>TikTok</h3>
+                    <p>@zarezz444</p>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square cc-arrow"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6289605274750" target="_blank" rel="noopener" class="contact-card">
+                <div class="cc-icon wa"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="cc-info">
+                    <h3>WhatsApp</h3>
+                    <p>6289605274750</p>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square cc-arrow"></i>
+            </a>
+
+            <!-- QRIS -->
+            <div class="qris-box">
+                <h2>Dukung Developer</h2>
+                <p class="qris-sub">Scan QRIS di bawah ini untuk memberikan dukungan</p>
+                <div class="qris-img">
+                    <img src="https://files.catbox.moe/idt3sa.jpg" alt="QRIS Payment" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+            

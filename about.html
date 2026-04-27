@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>About — FileTools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="toast-box" id="toastBox" aria-live="polite"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Navigasi utama">
+        <a href="index.html" class="nav-brand">
+            <div class="nav-logo">FT</div>
+            <span class="nav-brand-text">FileTools</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-house" style="margin-right:3px;font-size:11px"></i>Home</a>
+            <a href="tools.html" class="nav-link"><i class="fa-solid fa-wrench" style="margin-right:3px;font-size:11px"></i>Tools</a>
+            <a href="about.html" class="nav-link active"><i class="fa-solid fa-circle-info" style="margin-right:3px;font-size:11px"></i>About</a>
+            <a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope" style="margin-right:3px;font-size:11px"></i>Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="tools.html" class="nav-link"><i class="fa-solid fa-wrench"></i>Tools</a>
+        <a href="about.html" class="nav-link active"><i class="fa-solid fa-circle-info"></i>About</a>
+        <a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope"></i>Contact</a>
+    </div>
+    <!-- Halaman About -->
+    <main class="page">
+        <div class="about-wrap">
+            <div class="about-head">
+                <h1>About</h1>
+                <p>Penjelasan lengkap fitur yang tersedia</p>
+            </div>
+
+            <article class="about-card">
+                <div class="ac-top">
+                    <div class="ac-icon ic-blue"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
+                    <div>
+                        <h2>Convert XLSX ke TXT</h2>
+                        <small>Fitur konversi format file</small>
+                    </div>
+                </div>
+                <p>Mengubah file Excel (.xlsx) menjadi file teks (.txt) dengan format sederhana: satu baris berisi satu nomor. File Excel diasumsikan memiliki 1 kolom berisi data nomor yang akan dibaca.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>Hanya menerima file berekstensi .xlsx</li>
+                    <li><i class="fa-solid fa-check"></i>Membaca kolom pertama dari sheet pertama</li>
+                    <li><i class="fa-solid fa-check"></i>Setiap sel yang berisi data = 1 baris teks</li>
+                    <li><i class="fa-solid fa-check"></i>Sel kosong akan dilewati otomatis</li>
+                    <li><i class="fa-solid fa-check"></i>Output file .txt langsung bisa di-download</li>
+                    <li><i class="fa-solid fa-check"></i>Semua proses di perangkat, tanpa kirim ke server</li>
+                </ul>
+            </article>
+            <article class="about-card">
+                <div class="ac-top">
+                    <div class="ac-icon ic-dark"><i class="fa-solid fa-scissors"></i></div>
+                    <div>
+                        <h2>Pecah File</h2>
+                        <small>Fitur split data otomatis</small>
+                    </div>
+                </div>
+                <p>Memecah data dari file .xlsx atau .txt menjadi beberapa file teks kecil. Setiap file berisi maksimal 1000 baris data. Semua file hasil digabung menjadi satu arsip ZIP.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i>Menerima file .xlsx dan .txt</li>
+                    <li><i class="fa-solid fa-check"></i>.xlsx dibaca pakai library XLSX di browser</li>
+                    <li><i class="fa-solid fa-check"></i>.txt dibaca per baris sebagai data teks</li>
+                    <li><i class="fa-solid fa-check"></i>Setiap file output maksimal 1000 baris</li>
+                    <li><i class="fa-solid fa-check"></i>Sisa data tetap dibuatkan file terakhir</li>
+                    <li><i class="fa-solid fa-check"></i>10.000 data menghasilkan 10 file (masing-masing 1000 baris)</li>
+                    <li><i class="fa-solid fa-check"></i>5.500 data menghasilkan 6 file (5 x 1000 + 1 x 500)</li>
+                    <li><i class="fa-solid fa-check"></i>Semua file dikemas jadi satu .zip via JSZip</li>
+                    <li><i class="fa-solid fa-check"></i>Nama file otomatis: nama_1.txt, nama_2.txt, dst.</li>
+                </ul>
+                <div class="about-note">
+                    <p><i class="fa-solid fa-circle-info"></i>Contoh: 2.350 data menghasilkan 3 file (2 file isi 1000 baris + 1 file isi 350 baris), semua dalam satu file ZIP.</p>
+                </div>
+            </article>
+
+            <article class="about-card">
+                <div class="ac-top">
+                    <div class="ac-icon ic-blue"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <h2>Keamanan Data</h2>
+                        <small>Privasi terjaga sepenuhnya</small>
+                    </div>
+                </div>
+                <p>Aplikasi ini berjalan sepenuhnya di browser perangkatmu. Tidak ada data yang dikirim ke server manapun. Setelah proses selesai, file yang di-upload tidak disimpan dan akan hilang saat halaman ditutup.</p>
+            </article>
+        </div>
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+    
+    
